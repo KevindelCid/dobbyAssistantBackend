@@ -27,7 +27,7 @@ const openai = new OpenAIApi(
 
 const sayHello = async (userSays) => {
   const response = await openai.createChatCompletion({
-    model: "text-davinci-003",
+    model: "gpt-3.5-turbo",
     temperature: 3,
     messages: [{ role: "user", content: userSays}],
   });
