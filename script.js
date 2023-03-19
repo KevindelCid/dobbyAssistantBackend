@@ -12,7 +12,8 @@ app.get("/:userSays", async (req, res) => {
   res.send(await sayHello(userSays));
 });
 
-const PORT = 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor de la API escuchando en el puerto ${PORT}`);
